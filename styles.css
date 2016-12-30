@@ -1,0 +1,44 @@
+html {
+    font-family: Arial;
+}
+
+input[type=text] {
+    
+    padding: 8px 12px;
+    margin: 8px 0px;
+
+    box-sizing: border-box;
+}
+
+input:hover {
+    background-color: grey;
+
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+}
+
+input[type=submit] {
+    background-color: green;
+}
+
+input[name=buttonCancel]{
+    background-color: red;
+}
+
+input {
+    margin: 8px 0;
+}
+
+label {
+    font-weight: bold;
+    width: 10em;
+    display: block;
+    float: left;
+}
+
+fieldset {
+   margin-right: 20%;
+}
+

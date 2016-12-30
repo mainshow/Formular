@@ -1,0 +1,88 @@
+﻿<!Doctype html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Erste HTML Seite </title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<form name="myform" action="eins.php" method="get" onsubmit="return validateForm()">
+    
+    <fieldset>
+        <h2>Adressdaten</h2>
+        <p>
+            <label for="anrede">Anrede</label><br />
+            <input id="anrede" type="radio" name="anrede" value="Herr" /> Herr
+            <input type="radio" name="anrede" value="Frau" /> Frau <br />
+        </p>
+
+        <p>
+            <label for="eingabeVorname">Vorname</label>
+            <input id="eingabeVorname" type="text" name="eingabeVorname" required/>
+        </p>
+
+        <p>
+            <label for="eingabeNachname">Nachname</label>
+            <input id="eingabeNachname" type="text" name="eingabeNachname" required/>
+        </p>
+
+        <p>
+            <label for="plz">PLZ</label>
+            <input id="plz" type="text" name="eingabePLZ" required/>
+        </p>
+
+        <p>
+            <label for="eingabeOrt">Ort</label>
+            <input id="eingabeOrt" type="text" name="eingabeOrt"required />
+        </p>
+
+        <p>
+            <label for="eingabeStrasse">Straße</label>
+            <input id="eingabeStrasse" type="text" name="eingabeStrasse" required/>
+        </p>
+
+        <p>
+            <label for="eingabeHausnummer">Hausnummer</label>
+            <input id="eingabeHausnummer" type="text" name="eingabeHausnummer" required/>
+        </p>
+    </fieldset><br />
+
+    <fieldset>
+        <h2>Angaben zur Person</h2>
+        <p>
+            <label for="eingabeGeburtsdatum">Geburtsdatum</label><br />
+            <input id="eingabeGeburtsdatum" type="date" name="eingabeGeburtsdatum" required/>
+        </p>
+
+        <p>
+            <label for="geschlecht">Geschlecht</label><br />
+            <input id="geschlecht" type="radio" name="geschlecht" value="männlich" required/>Männlich
+            <input id="geschlecht" type="radio" name="geschlecht" value="weiblich" required/>Weiblich
+            <input id="geschlecht" type="radio" name="geschlecht" value="sonstiges" required/>Sonstiges <br />
+        </p>
+
+        <p>
+            <label for="eingabeTelefon">Telefon</label>
+            <input id="eingabeTelefon" type="text" name="eingabeTelefon" required/><br />4
+        </p>
+
+        <p>
+            <label for="eingabeEMail">E-Mail</label>
+            <input id="eingabeEMail" type="text" name="eingabeEMail" required/><br />
+        </p>
+    </fieldset>
+    <fieldset>
+        <input type="submit" name="buttonSubmit" value="Senden">
+        <input type="button" name="buttonCancel" value="Abbrechen" />
+
+    </fieldset>
+
+
+
+
+</form>
+<script src="formular.js"></script>
+</body>
+</html>
