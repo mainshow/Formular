@@ -79,11 +79,13 @@
 
 </form>
 <!--<script src="formular.js"></script> -->
-</body>
-<script>
-var elem = document.myform.getElementByName('buttonSubmit');
-elem.addEventListener('submit', chkForm);
-alert("JS funktioniert!");
+<script language="JavaScript">
+alert("JS1 funktioniert!");
+var elem = document.getElementById('buttonSubmit');
+alert("JS2 funktioniert!");
+elem.addEventListener('click', chkForm);
+alert("JS3 funktioniert!");
+
 
 function chkForm() {
     var vorname = document.myform.eingabeVorname.value;
@@ -116,4 +118,6 @@ function chkForm() {
  //   }
 }
 </script>
+</body>
+
 </html>
