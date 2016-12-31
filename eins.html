@@ -7,9 +7,8 @@
 </head>
 
 <body>
-
-<form name="myform" action="eins.php" method="get" onsubmit="return validateForm()">
-    
+<form name="myform"  method="post">
+<!-- action="eins.php" onsubmit="return validateForm() -->   
     <fieldset>
         <h2>Adressdaten</h2>
         <p>
@@ -65,7 +64,7 @@
 
         <p>
             <label for="eingabeTelefon">Telefon</label>
-            <input id="eingabeTelefon" type="text" name="eingabeTelefon" required/><br />4
+            <input id="eingabeTelefon" type="text" name="eingabeTelefon" required/><br />
         </p>
 
         <p>
@@ -76,13 +75,45 @@
     <fieldset>
         <input type="submit" name="buttonSubmit" value="Senden">
         <input type="button" name="buttonCancel" value="Abbrechen" />
-
     </fieldset>
 
-
-
-
 </form>
-<script src="formular.js"></script>
+<!--<script src="formular.js"></script> -->
 </body>
+<script>
+var elem = document.myform.getElementByName('buttonSubmit');
+elem.addEventListener('submit', chkForm);
+alert("JS funktioniert!");
+
+function chkForm() {
+    var vorname = document.myform.eingabeVorname.value;
+//    var stringVorname = new Array[20];
+//    for (var i = 0; i < vorname.length(); i++){
+//        stringVorname[i] = vorname.charAt(i);
+//    }
+    for (var i = 0; i < vorname.length(); i++)
+    {
+        if(vorname.charAt[i+1] == "+" | vorname.charAt[i+1] == "/" | vorname.charAt[i+1] == "\\" | vorname.charAt[i+1] == "1" | vorname.charAt[i+1] == "2")
+        {
+            alert("Das Sonderzeichen \"" + vorname.charAt[i+1] + "\" ist im Vornamen nicht erlaubt!");
+            return false;
+        }
+        else
+        {
+            alert("Was ist hier los?");
+        }
+    }
+         
+    
+ //   if (vorname == "") {
+ //       alert("Bitte einen Vornamen eintragen!")
+ //       return false;
+ //   }
+ //   var nachname = document.forms["myform"]["eingabeNachname"].value;
+ //   if (nachname == "") {
+ //       alert("Bitte einen Nachnamen eintragen!")
+ //       return false;
+ //   }
+}
+</script>
 </html>
